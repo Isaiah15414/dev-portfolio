@@ -67,6 +67,16 @@ a {
     gap: 0.5rem 2rem;
 }
 
+.fancy {
+    color: black;
+}
+
+.fancy:hover {
+    color: var(--color);
+    text-decoration: underline;
+    transition: all 100ms ease-out;
+}
+
 .icon-set {
     display: flex;
     align-self: center;
