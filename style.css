@@ -1,3 +1,22 @@
+/* Colors */
+
+:root {
+    --bg-light: white;
+    --bg-dark: var(--darker-gray);
+
+    --lighter-gray: hsl(0, 0%, 85%);
+    --light-gray: hsl(0, 0%, 75%);
+    --medium-gray: hsl(0, 0%, 50%);
+    --dark-gray: hsl(0, 0%, 25%);
+    --darker-gray: hsl(0, 0%, 15%);
+
+    --text-light: black;
+    --text-dark: white;
+    --text-highlight: blue;
+    --link-light: navy;
+    --link-dark: cyan;
+}
+
 /* General */
 
 h1,
@@ -33,32 +52,69 @@ li::before {
 a {
     font-family: monospace;
     font-style: italic;
-    color: navy;
+    color: var(--link-light);
 }
 
 /* Dark Mode */
 
-button {
+.theme-button {
     border: 4px;
     border-style: solid;
-    border-color: lightgray;
-    background-color: white;
+    border-color: var(--lighter-gray);
+    background-color: var(--bg-light);
+    color: var(--text-light);
     padding: 10px;
     transition: all 200ms ease-out;
 }
 
-button:hover {
-    border-color: gray;
-    background-color: midnightblue;
-    color: white;
+.theme-button:hover {
+    border-color: var(--darker-gray);
+    background-color: var(--darker-gray);
+    color: var(--text-dark);
 }
 
 .dark-mode {
-    background-color: midnightblue;
-    color: white;
+    background-color: var(--darker-gray);
+    color: var(--text-dark);
+    .editors-note {
+        color: var(--dark-gray);
+    }
+    a {
+        color: var(--link-dark);
+    }
+    a.icon {
+        color: var(--text-dark);
+    }
+    a.icon:hover {
+        color: var(--darker-gray);
+    }
+    .fancy {
+        color: var(--text-dark);
+    }
+    .fancy:hover {
+        color: var(--text-highlight);
+        background-color: var(--bg-light);
+    }
+    .theme-button {
+        border-color: var(--dark-gray);
+        background-color: var(--bg-dark);
+        color: var(--text-dark);
+    }
+    .theme-button:hover {
+        border-color: var(--bg-light);
+        background-color: var(--bg-light);
+        color: var(--text-light);
+    }
+    .body-container {
+        border-color: var(--dark-gray);
+    }
 }
 
 /* Header */
+
+.editors-note {
+    color: var(--lighter-gray);
+}
 
 .container {
     display: flex;
@@ -79,7 +135,7 @@ button:hover {
 .body-container {
     border: 4px;
     border-style: solid;
-    border-color: lightgray;
+    border-color: var(--lighter-gray);
     padding: 1rem 1rem;
 }
 
@@ -96,13 +152,13 @@ button:hover {
 }
 
 .fancy {
-    color: black;
+    color: var(--text-light);
 }
 
 .fancy:hover {
-    background-color: blue;
-	transition: all 100ms ease-out;
-    color: white;
+    background-color: var(--text-highlight);
+    transition: all 200ms ease-out;
+    color: var(--text-dark);
 }
 
 /* Bottom Container */
@@ -121,15 +177,15 @@ button:hover {
 }
 
 .icon {
-    color: black;
+    color: var(--text-light);
     size: 20px;
-    transition: all 100ms ease-out;
+    transition: all 200ms ease-out;
     padding: 6px;
 }
 
 .icon:hover {
     background-color: var(--color);
-    color: white;
+    color: var(--text-dark);
 }
 
 /* Footer */
