@@ -1,3 +1,5 @@
+/* General */
+
 h1,
 h2,
 h3,
@@ -13,7 +15,7 @@ p {
 }
 
 ul {
-    list-style: none; /* Remove list bullets */
+    list-style: none;
     padding: 0;
     margin: 0;
 }
@@ -34,11 +36,35 @@ a {
     color: navy;
 }
 
+/* Dark Mode */
+
+button {
+    border: 4px;
+    border-style: solid;
+    border-color: lightgray;
+    background-color: white;
+    padding: 10px;
+    transition: all 200ms ease-out;
+}
+
+button:hover {
+    border-color: gray;
+    background-color: midnightblue;
+    color: white;
+}
+
+.dark-mode {
+    background-color: midnightblue;
+    color: white;
+}
+
+/* Header */
+
 .container {
-    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
+    height: 90vh;
 }
 
 .header-container {
@@ -47,6 +73,8 @@ a {
     align-items: center;
     column-gap: 1rem;
 }
+
+/* Body Container */
 
 .body-container {
     border: 4px;
@@ -72,9 +100,17 @@ a {
 }
 
 .fancy:hover {
-    color: var(--color);
-    text-decoration: underline;
-    transition: all 100ms ease-out;
+    background-color: blue;
+	transition: all 100ms ease-out;
+    color: white;
+}
+
+/* Bottom Container */
+
+.bottom-container {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
 }
 
 .icon-set {
@@ -88,8 +124,12 @@ a {
     color: black;
     size: 20px;
     transition: all 100ms ease-out;
+    padding: 6px;
 }
 
 .icon:hover {
-    color: var(--color);
+    background-color: var(--color);
+    color: white;
 }
+
+/* Footer */
