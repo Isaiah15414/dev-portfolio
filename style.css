@@ -1,22 +1,3 @@
-/* Colors */
-
-:root {
-    --bg-light: white;
-    --bg-dark: var(--darker-gray);
-
-    --lighter-gray: hsl(0, 0%, 85%);
-    --light-gray: hsl(0, 0%, 75%);
-    --medium-gray: hsl(0, 0%, 50%);
-    --dark-gray: hsl(0, 0%, 25%);
-    --darker-gray: hsl(0, 0%, 15%);
-
-    --text-light: black;
-    --text-dark: white;
-    --text-highlight: blue;
-    --link-light: navy;
-    --link-dark: cyan;
-}
-
 /* General */
 
 h1,
@@ -46,38 +27,86 @@ li {
 
 li::before {
     padding-right: 8px;
-    content: ">";
+    content: "▪";
 }
 
 a {
     font-family: monospace;
     font-style: italic;
-    color: var(--link-light);
 }
 
-/* Dark Mode */
+/* Colors */
 
-.theme-button {
-    border: 4px;
-    border-style: solid;
-    border-color: var(--lighter-gray);
+:root {
+    --bg-light: white;
+    --bg-dark: var(--darker-gray);
+
+    --lighter-gray: oklch(0.8845 0 0);
+    --light-gray: oklch(0.8054 0 0);
+    --medium-gray: oklch(0.598181 0 0);
+    --dark-gray: oklch(0.3705 0 0);
+    --darker-gray: oklch(0.2697 0 0);
+
+    --text-light: black;
+    --text-dark: white;
+    --text-highlight: blue;
+    --link-light: navy;
+    --link-dark: cyan;
+
+    --theme-transition: all 200ms ease-in-out;
+}
+
+.light-mode {
+    transition: var(--theme-transition);
     background-color: var(--bg-light);
     color: var(--text-light);
-    padding: 10px;
-    transition: all 200ms ease-out;
-}
 
-.theme-button:hover {
-    border-color: var(--darker-gray);
-    background-color: var(--darker-gray);
-    color: var(--text-dark);
+    .editors-note {
+        color: var(--lighter-gray);
+        transition: var(--theme-transition);
+    }
+    a {
+        color: var(--link-light);
+    }
+    a.icon {
+        color: var(--text-light);
+    }
+    a.icon:hover {
+        background-color: var(--color);
+        color: var(--text-dark);
+    }
+    .fancy {
+        color: var(--text-light);
+        transition: color 200ms ease-out;
+    }
+    .fancy:hover {
+        background-color: var(--text-highlight);
+        color: var(--text-dark);
+    }
+    .theme-button {
+        border-color: var(--lighter-gray);
+        background-color: var(--bg-light);
+        color: var(--text-light);
+        transition: var(--theme-transition);
+    }
+    .theme-button:hover {
+        border-color: var(--darker-gray);
+        background-color: var(--darker-gray);
+        color: var(--text-dark);
+    }
+    .body-container {
+        border-color: var(--lighter-gray);
+        transition: var(--theme-transition);
+    }
 }
 
 .dark-mode {
-    background-color: var(--darker-gray);
+    transition: var(--theme-transition);
+    background-color: var(--bg-dark);
     color: var(--text-dark);
     .editors-note {
         color: var(--dark-gray);
+        transition: var(--theme-transition);
     }
     a {
         color: var(--link-dark);
@@ -86,10 +115,12 @@ a {
         color: var(--text-dark);
     }
     a.icon:hover {
+        background-color: var(--color);
         color: var(--darker-gray);
     }
     .fancy {
         color: var(--text-dark);
+        transition: color 200ms ease-out;
     }
     .fancy:hover {
         color: var(--text-highlight);
@@ -99,6 +130,7 @@ a {
         border-color: var(--dark-gray);
         background-color: var(--bg-dark);
         color: var(--text-dark);
+        transition: var(--theme-transition);
     }
     .theme-button:hover {
         border-color: var(--bg-light);
@@ -107,13 +139,16 @@ a {
     }
     .body-container {
         border-color: var(--dark-gray);
+        transition: var(--theme-transition);
     }
 }
 
 /* Header */
 
-.editors-note {
-    color: var(--lighter-gray);
+.theme-button {
+    border: 4px;
+    border-style: solid;
+    padding: 10px;
 }
 
 .container {
@@ -135,7 +170,6 @@ a {
 .body-container {
     border: 4px;
     border-style: solid;
-    border-color: var(--lighter-gray);
     padding: 1rem 1rem;
 }
 
@@ -148,17 +182,19 @@ a {
 .grid-container-list {
     display: grid;
     grid-template-columns: auto 1fr;
+    align-items: center;
     gap: 0.5rem 2rem;
 }
 
-.fancy {
-    color: var(--text-light);
+.tag {
+    font-family: monospace;
+    border: 0px;
+    border-radius: 5px;
+    background-color: var(--color);
+    margin: 0px;
 }
-
-.fancy:hover {
-    background-color: var(--text-highlight);
-    transition: all 200ms ease-out;
-    color: var(--text-dark);
+.tag:hover {
+    opacity: 75%;
 }
 
 /* Bottom Container */
@@ -177,15 +213,8 @@ a {
 }
 
 .icon {
-    color: var(--text-light);
     size: 20px;
-    transition: all 200ms ease-out;
     padding: 6px;
-}
-
-.icon:hover {
-    background-color: var(--color);
-    color: var(--text-dark);
 }
 
 /* Footer */

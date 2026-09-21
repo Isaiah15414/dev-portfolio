@@ -10,12 +10,12 @@
 		<script src="https://kit.fontawesome.com/a14d442b8c.js" crossorigin="anonymous"></script>
 	</head>
 
-	<body>
+	<body class="dark-mode"> <!-- change starting theme here -->
 		<div class="header-container" style="align-items: start">
-			<p class="editors-note" style="font-style: italic">> hello there~ <br>> thanks for checking
+			<p class="editors-note" style="font-style: italic">~ hello there <br>~ thanks for checking
 				out my website</p>
-			<button class="theme-button" type="checkbox" onclick="switchTheme()"><i
-					class="fa-regular fa-moon"></i></button>
+			<button class="theme-button" type="checkbox" onclick="switchTheme()"><i id="theme-icon"
+					class="fa-solid fa-moon"></i></button>
 		</div>
 		<!-- Header -->
 		<div class="container"">
@@ -44,15 +44,42 @@
 					<h2>inspired by</h2>
 					<div class="grid-container-list">
 						<p><span style="font-weight: bold">languages</span></p>
-						<p><span class="fancy">python</span> / <span class="fancy">java</span> / <span
+						<div>
+							<button class="tag" style="--color: oklch(0.851 0.1569 89.3);"><i
+									class="fa-brands fa-python"></i>Python</button>
+							<button class="tag" style="--color: oklch(0.7439 0.1622 63.38);"><i
+									class="fa-brands fa-java"></i>Java</button>
+							<button class="tag" style="--color: oklch(0.6553 0.0996 251.09);"><i
+									class="fa-solid fa-plus"></i>C++</button>
+							<button class="tag" style="--color: oklch(0.6345 0.1944 33.21);"><i
+									class="fa-brands fa-git-alt" style="color: white;"></i><span
+									style="color: white;">Git</span></button>
+							<button class="tag" style="--color: oklch(0.73 0.1257 185.36);"><i
+									class="fa-brands fa-typescript"></i>Typst</button>
+						</div>
+						<!-- <p><span class="fancy">python</span> / <span class="fancy">java</span> / <span
 								class="fancy">c++</span> / <span class="fancy">git</span> / <span
-								class="fancy">typst</span></p>
+								class="fancy">typst</span></p> -->
 
 						<p><span style="font-weight: bold">game dev</span></p>
-						<p><span class="fancy">godot + gdscript</span></p>
+						<div>
+							<button class="tag" style="--color: oklch(0.6076 0.1018 242.12);"><i
+									class="fa-solid fa-gear"></i>Godot</button>
+							<button class="tag" style="--color: oklch(0.4807 0.0781 241.92);"><i
+									class="fa-solid fa-code" style="color: white;"></i><span
+									style="color: white;">GDScript</span></button>
+						</div>
+						<!-- <p><span class="fancy">godot + gdscript</span></p> -->
 
 						<p><span style="font-weight: bold">software</span></p>
-						<p><span class="fancy">vscode</span> / <span class="fancy">github</span></p>
+						<div>
+							<button class="tag" style="--color: oklch(0.5279 0.1309 244.5);"><i
+									class="fa-brands fa-visual-studio"></i>VSCode</button>
+							<button class="tag" style="--color: oklch(0.364 0.035 236.3);"><i
+									class="fa-brands fa-github" style="color: white;"></i><span
+									style="color: white;">Github</span></button>
+						</div>
+						<!-- <p><span class="fancy">vscode</span> / <span class="fancy">github</span></p> -->
 					</div>
 					<div>
 						<ul>
@@ -67,15 +94,37 @@
 					<h2>indebted to</h2>
 					<div class="grid-container-list">
 						<p><span style="font-weight: bold">languages</span></p>
-						<p><span class="fancy">html + css</span> / <span class="fancy">js</span> / <span
-								class="fancy">c#</span> / <span class="fancy">rust</span></p>
+						<div>
+							<button class="tag" style="--color: hsl(12, 73%, 50%);"><i class="fa-brands fa-html5"
+									style="color: white;"></i><span style="color: white;">HTML</span></button>
+							<button class="tag" style="--color: hsl(227, 73%, 51%);"><i class="fa-brands fa-css"
+									style="color: white;"></i><span style="color: white;">CSS</span></button>
+							<button class="tag" style="--color: hsl(52, 76%, 59%);"><i
+									class="fa-brands fa-square-js"></i>JavaScript</button>
+							<button class="tag" style="--color: hsl(266, 53%, 63%);"><i
+									class="fa-solid fa-hashtag"></i>C#</button>
+							<button class="tag" style="--color: hsl(30, 98%, 48%);"><i
+									class="fa-brands fa-rust"></i>Rust</button>
+						</div>
+						<!-- <p><span class="fancy">html + css</span> / <span class="fancy">js</span> / <span
+								class="fancy">c#</span> / <span class="fancy">rust</span></p> -->
 
 						<p><span style="font-weight: bold">game dev</span></p>
-						<p><span class="fancy">unity</span> / <span class="fancy">blender</span> / <span
-								class="fancy">aseprite</span></p>
+						<div>
+							<button class="tag" style="--color: oklch(0.5862 0.0089 319.45);"><i
+									class="fa-brands fa-unity"></i>Unity</button>
+							<button class="tag" style="--color: oklch(0.676585 0.173286 51.9263);"><i
+									class="fa-solid fa-blender"></i>Blender</button>
+						</div>
+						<!-- <p><span class="fancy">unity</span> / <span class="fancy">blender</span> / <span
+								class="fancy">aseprite</span></p> -->
 
 						<p><span style="font-weight: bold">software</span></p>
-						<p><span class="fancy">linux</span></p>
+						<div>
+							<button class="tag" style="--color: oklch(0 0 0);"><i class="fa-brands fa-linux"
+									style="color: white;"></i><span style="color: white;">Linux</span></button>
+						</div>
+						<!-- <p><span class="fancy">linux</span></p> -->
 					</div>
 					<ul>
 						<li><a href="https://github.com/BattleCh1cken">BattleCh1cken</a></li>
